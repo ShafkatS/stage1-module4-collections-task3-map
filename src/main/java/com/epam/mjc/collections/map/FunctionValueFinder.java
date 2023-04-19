@@ -12,5 +12,15 @@ public class FunctionValueFinder {
     }
 
     private Map<Integer, Integer> calculateFunctionMap(List<Integer> sourceList) {
+        Map<Integer, Integer> map = new HashMap<>();
+        if (sourceList.isEmpty()) {
+            return map;
+        }
+        int temp = 0;
+        for (Integer e : sourceList) {
+            temp = 5 * e + 2;
+            map.put(e, temp);
+        }
+        return map;
     }
 }
